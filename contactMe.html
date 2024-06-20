@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Ahmad Fauzi</h1>
+        <ul>
+          <li><a href="/profile.html">Home</a></li>
+          <li><a href="#">About me</a></li>
+          <li><a href="/contactMe.html">Contact me</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="form-message">
+        <form>
+          <fieldset>
+            <legend>Contact Me</legend>
+            <div>
+              <label for="full-name">Full Name</label>
+              <input
+                type="text"
+                name="fullname"
+                id="full-name"
+                placeholder="Full Name..."
+              />
+            </div>
+
+            <div>
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email..."
+              />
+            </div>
+
+            <div>
+              <label for="telephone">Telephone</label>
+              <input
+                type="text"
+                name="telephone"
+                id="telephone"
+                placeholder="Number Telephone..."
+              />
+            </div>
+
+            <div>
+              <label for="message">Message</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                placeholder="Create a message"
+              ></textarea>
+            </div>
+            <div>
+              <input type="button" value="Send" />
+            </div>
+          </fieldset>
+        </form>
+      </section>
+      <br />
+      <section id="table-output">
+        <table border="1">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Full Name</th>
+              <th>Email</th>
+              <th>Telephone</th>
+              <th>Message</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Ahmad Fauzi</td>
+              <td>ahmadfauzi12346@gmail.com</td>
+              <td>081234567890</td>
+              <td>Hi, I am Ahmad Fauzi</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <br />
+    <footer>&copy; Ahmad Fauzi</footer>
+  </body>
+</html>
