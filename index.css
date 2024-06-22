@@ -61,6 +61,7 @@ main {
   align-items: center;
   margin: 20px 0;
 }
+
 #profile img {
   width: 200px;
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
@@ -126,4 +127,18 @@ main {
   justify-content: center;
   align-items: center;
   color: var(--cream);
+}
+
+/* Responsive */
+@media screen and (max-width: 576px) {
+  #navbar ul li a {
+    font-size: 12px;
+  }
+  #navbar h1 {
+    text-wrap: wrap;
+  }
+
+  #table-output {
+    overflow-x: auto;
+  }
 }
