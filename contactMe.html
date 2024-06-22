@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
     <title>Contact Me</title>
   </head>
   <body>
     <header>
-      <nav>
+      <nav id="navbar">
         <h1>Ahmad Fauzi</h1>
         <ul>
           <li><a href="/profile.html">Home</a></li>
@@ -44,7 +45,7 @@
             <div>
               <label for="telephone">Telephone</label>
               <input
-                type="text"
+                type="number"
                 name="telephone"
                 id="telephone"
                 placeholder="Number Telephone..."
@@ -60,7 +61,7 @@
                 placeholder="Create a message"
               ></textarea>
             </div>
-            <div>
+            <div class="button">
               <input type="button" value="Send" />
             </div>
           </fieldset>
@@ -91,6 +92,8 @@
       </section>
     </main>
     <br />
-    <footer>&copy; Ahmad Fauzi</footer>
+    <footer id="footer">
+      <h3>&copy; Ahmad Fauzi</h3>
+    </footer>
   </body>
 </html>
