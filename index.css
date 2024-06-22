@@ -11,9 +11,14 @@ body {
   font-family: sans-serif;
 }
 
-* {
-  border: 1px solid red;
+main {
+  padding: 10px;
+  margin: 0;
 }
+
+/* * {
+  border: 1px solid red;
+} */
 
 #navbar {
   width: 100%;
@@ -42,11 +47,12 @@ body {
 #navbar ul li a {
   text-decoration: none;
   color: var(--hitam);
-  font-size: 20px;
+  font-size: 16px;
 }
 
 #navbar ul li a:hover {
   color: var(--birumuda);
+  text-decoration: underline;
 }
 
 #profile {
@@ -59,6 +65,57 @@ body {
   width: 200px;
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   border-radius: 10px;
+}
+
+/* page contactme */
+
+#form-message {
+  width: 100%;
+}
+
+#form-message form fieldset div {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+#form-message form fieldset div label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#form-message form fieldset div input,
+#form-message form fieldset div textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#form-message form fieldset div input:focus,
+#form-message form fieldset div textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+#form-message form fieldset .button input {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#form-message form fieldset .button input:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
 }
 
 #footer {
