@@ -72,8 +72,13 @@ main {
 
 #form-message {
   width: 100%;
+  padding: 10px;
 }
-
+#table-output {
+  width: 100%;
+  padding: 10px;
+}
+/* 
 #form-message form fieldset div {
   display: flex;
   justify-content: flex-start;
@@ -117,7 +122,7 @@ main {
 #form-message form fieldset .button input:hover {
   background-color: #0056b3;
   transform: scale(1.05);
-}
+} */
 
 /* #footer {
   width: 100%;

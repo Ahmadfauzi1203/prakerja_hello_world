@@ -45,79 +45,92 @@
     </header>
     <main>
       <section id="form-message">
-        <form>
-          <fieldset>
-            <legend>Contact Me</legend>
-            <div>
-              <label for="full-name">Full Name</label>
+        <div class="container bg-info rounded-2 py-3">
+          <h1 class="text-center fw-bold">Contact Me</h1>
+          <form>
+            <div class="mb-3">
+              <label for="full-name" class="form-label">Full Name</label>
               <input
                 type="text"
                 name="fullname"
                 id="full-name"
                 placeholder="Full Name..."
+                class="form-control"
               />
             </div>
 
-            <div>
-              <label for="email">Email</label>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
               <input
                 type="email"
                 name="email"
                 id="email"
                 placeholder="Email..."
+                class="form-control"
               />
             </div>
 
-            <div>
-              <label for="telephone">Telephone</label>
+            <div class="mb-3">
+              <label for="telephone" class="form-label">Telephone</label>
               <input
                 type="number"
                 name="telephone"
                 id="telephone"
                 placeholder="Number Telephone..."
+                class="form-control"
               />
             </div>
 
-            <div>
-              <label for="message">Message</label>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
               <textarea
                 name="message"
                 id="message"
                 cols="30"
                 placeholder="Create a message"
+                class="form-control"
               ></textarea>
             </div>
-            <div class="button">
-              <input type="button" value="Send" />
+            <div>
+              <button type="submit" class="btn btn-primary">Send</button>
             </div>
-          </fieldset>
-        </form>
+          </form>
+        </div>
       </section>
-      <br />
+
       <section id="table-output">
-        <table border="1">
-          <thead>
-            <tr>
-              <th>No</th>
-              <th>Full Name</th>
-              <th>Email</th>
-              <th>Telephone</th>
-              <th>Message</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Ahmad Fauzi</td>
-              <td>ahmadfauzi12346@gmail.com</td>
-              <td>081234567890</td>
-              <td>Hi, I am Ahmad Fauzi</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="container">
+          <table class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Telephone</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Ahmad Fauzi</td>
+                <td>ahmadfauzi12346@gmail.com</td>
+                <td>081234567890</td>
+                <td>Hi, I am Ahmad Fauzi</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Steven Heuay</td>
+                <td>steven@gmail.com</td>
+                <td>081234565590</td>
+                <td>Hi, I am Steven Hueay</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
     </main>
-    <br />
+
     <footer
       class="container-fluid bg-dark p-2 text-center text-light"
       id="footer"
