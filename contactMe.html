@@ -3,97 +3,160 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
     <link rel="stylesheet" href="index.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Contact Me</title>
   </head>
   <body>
-    <header>
-      <nav id="navbar">
-        <h1>Ahmad Fauzi</h1>
-        <ul>
-          <li><a href="/profile.html">Home</a></li>
-          <li><a href="#">About me</a></li>
-          <li><a href="/contactMe.html">Contact me</a></li>
-        </ul>
-      </nav>
+    <header class="navbar navbar-expand-md bg-warning navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">Ahmad Fauzi</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav class="collapse navbar-collapse" id="navbarNav">
+          <!-- <h1 class="fw-bold">Ahmad Fauzi</h1> -->
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="/profile.html">Home</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">About me</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contactMe.html">Contact me</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
       <section id="form-message">
-        <form>
-          <fieldset>
-            <legend>Contact Me</legend>
-            <div>
-              <label for="full-name">Full Name</label>
+        <div class="container bg-info rounded-2 py-3">
+          <h1 class="text-center fw-bold" style="font-family: Playfair Display">
+            Contact Me
+          </h1>
+          <form>
+            <div class="mb-3">
+              <label for="full-name" class="form-label">Full Name</label>
               <input
                 type="text"
                 name="fullname"
                 id="full-name"
                 placeholder="Full Name..."
+                class="form-control"
               />
             </div>
 
-            <div>
-              <label for="email">Email</label>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
               <input
                 type="email"
                 name="email"
                 id="email"
                 placeholder="Email..."
+                class="form-control"
               />
             </div>
 
-            <div>
-              <label for="telephone">Telephone</label>
+            <div class="mb-3">
+              <label for="telephone" class="form-label">Telephone</label>
               <input
                 type="number"
                 name="telephone"
                 id="telephone"
                 placeholder="Number Telephone..."
+                class="form-control"
               />
             </div>
 
-            <div>
-              <label for="message">Message</label>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
               <textarea
                 name="message"
                 id="message"
                 cols="30"
                 placeholder="Create a message"
+                class="form-control"
               ></textarea>
             </div>
-            <div class="button">
-              <input type="button" value="Send" />
+            <div>
+              <button type="submit" class="btn btn-primary">Send</button>
             </div>
-          </fieldset>
-        </form>
+          </form>
+        </div>
       </section>
-      <br />
+
       <section id="table-output">
-        <table border="1">
-          <thead>
-            <tr>
-              <th>No</th>
-              <th>Full Name</th>
-              <th>Email</th>
-              <th>Telephone</th>
-              <th>Message</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Ahmad Fauzi</td>
-              <td>ahmadfauzi12346@gmail.com</td>
-              <td>081234567890</td>
-              <td>Hi, I am Ahmad Fauzi</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="container">
+          <table class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Telephone</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Ahmad Fauzi</td>
+                <td>ahmadfauzi12346@gmail.com</td>
+                <td>081234567890</td>
+                <td>Hi, I am Ahmad Fauzi</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Steven Heuay</td>
+                <td>steven@gmail.com</td>
+                <td>081234565590</td>
+                <td>Hi, I am Steven Hueay</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
     </main>
-    <br />
-    <footer id="footer">
+
+    <footer
+      class="container-fluid bg-dark p-2 text-center text-light"
+      id="footer"
+    >
       <h3>&copy; Ahmad Fauzi</h3>
     </footer>
+
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
