@@ -55,17 +55,21 @@ main {
   text-decoration: underline;
 }
 
-#profile {
+/* #profile {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 20px 0;
-}
+} */
 
-#profile img {
+/* #profile img {
   width: 200px;
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   border-radius: 10px;
+} */
+
+#project {
+  width: 100%;
 }
 
 /* page contactme */
