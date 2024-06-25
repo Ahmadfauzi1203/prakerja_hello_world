@@ -21,8 +21,20 @@
   <body>
     <header class="navbar navbar-expand-md bg-warning navbar-light">
       <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">Ahmad Fauzi</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <nav class="collapse navbar-collapse" id="navbarNav">
-          <h1 class="fw-bold">Ahmad Fauzi</h1>
+          <!-- <h1 class="fw-bold">Ahmad Fauzi</h1> -->
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link active" href="/profile.html">Home</a>
@@ -36,12 +48,24 @@
       </div>
     </header>
     <main>
-      <section id="profile">
-        <img
-          src="https://ahmadfauzi1203.github.io/img/avatar.jpg"
-          alt="Ahmad Fauzi"
-          width="200"
-        />
+      <section class="jumbotron bg-info">
+        <div class="row align-items-center">
+          <div class="col-md-6 p-5">
+            <h1 class="fw-bold">Ahmad Fauzi</h1>
+            <p class="lead">
+              Hello, my name is Ahmad Fauzi. I'm 18 years old. I live in Bogor,
+              Indonesia. I'm a student at SMK Negeri 1 Bogor. I'm interested in
+              Web Development.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <img
+              src="https://ahmadfauzi1203.github.io/img/avatar.jpg"
+              alt="Ahmad Fauzi"
+              class="img-thumbnail w-50 mx-auto d-block"
+            />
+          </div>
+        </div>
       </section>
     </main>
     <br />
