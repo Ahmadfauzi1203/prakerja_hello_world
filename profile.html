@@ -179,6 +179,19 @@
         </div>
       </section>
 
+      <!-- Thermometer -->
+      <section id="thermometer" class="mt-5">
+        <div class="container rounded-2 py-3 bg-info">
+          <h1>Konversi Suhu Fahrenheit ke Celsius</h1>
+          <label for="fahrenheit">Masukkan suhu dalam Fahrenheit:</label>
+          <input type="number" id="fahrenheit" name="fahrenheit" />
+          <button class="btn btn-primary" onclick="convertToFahrenheit()">
+            Konversi
+          </button>
+          <p class="fw-bold" id="result"></p>
+        </div>
+      </section>
+
       <!-- Modal -->
       <div class="modal" tabindex="-1" id="exampleModal">
         <div class="modal-dialog">
@@ -224,6 +237,15 @@
       const tooltipList = [...tooltipTriggerList].map(
         (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
       );
+
+      // Konversi Suhu Fahrenheit ke Celsius
+      function convertToFahrenheit() {
+        const fahrenheit = document.getElementById("fahrenheit").value;
+        const celsius = ((fahrenheit - 32) * 5) / 9;
+        document.getElementById("result").innerText = `Hasil: ${celsius.toFixed(
+          2
+        )} °C`;
+      }
     </script>
   </body>
 </html>
