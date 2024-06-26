@@ -106,7 +106,13 @@
               ></textarea>
             </div>
             <div>
-              <button type="submit" class="btn btn-primary">Send</button>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                onclick="validated()"
+              >
+                Send
+              </button>
             </div>
           </form>
         </div>
@@ -158,5 +164,19 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      function validated() {
+        const telephoneInput = document.getElementById("telephone");
+        const telephoneValue = telephoneInput.value;
+        if (telephoneValue.length !== 12) {
+          telephoneInput.setCustomValidity(
+            "Telephone number must be 12 digits"
+          );
+        } else {
+          telephoneInput.setCustomValidity("");
+        }
+      }
+    </script>
   </body>
 </html>
