@@ -61,7 +61,7 @@
           <h1 class="text-center fw-bold" style="font-family: Playfair Display">
             Contact Me
           </h1>
-          <form>
+          <form action="" id="Myform">
             <div class="mb-3">
               <label for="full-name" class="form-label">Full Name</label>
               <input
@@ -105,15 +105,21 @@
                 class="form-control"
               ></textarea>
             </div>
-            <div>
+            <div class="mb-3">
               <button
                 type="submit"
                 class="btn btn-primary"
-                onclick="validated()"
+                onclick="validated(event)"
               >
                 Send
               </button>
             </div>
+            <p
+              id="successMessage"
+              style="display: none; font-weight: bold; color: green"
+            >
+              Success sending
+            </p>
           </form>
         </div>
       </section>
@@ -166,7 +172,9 @@
     ></script>
 
     <script>
-      function validated() {
+      function validated(event) {
+        event.preventDefault();
+        document.getElementById("successMessage").style.display = "block";
         const telephoneInput = document.getElementById("telephone");
         const telephoneValue = telephoneInput.value;
         if (telephoneValue.length !== 12) {
