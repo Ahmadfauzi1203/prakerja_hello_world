@@ -56,7 +56,7 @@
       </div>
     </header>
     <main>
-      <section class="jumbotron bg-info container-fluid">
+      <section class="jumbotron bg-info container-fluid py-3">
         <div class="row align-items-center">
           <div class="col-md-6 p-5">
             <h1 class="fw-bold" style="font-family: Playfair Display">
@@ -96,6 +96,7 @@
                 <i class="fa-brands fa-instagram"></i>
               </button>
             </div>
+            <div class="clock fw-bold fs-1" id="clock"></div>
           </div>
           <div class="col-md-6">
             <img
@@ -179,6 +180,19 @@
         </div>
       </section>
 
+      <!-- Thermometer -->
+      <section id="thermometer" class="mt-5">
+        <div class="container rounded-2 py-3">
+          <h1 id="title">Konversi Suhu Fahrenheit ke Celsius</h1>
+          <label for="fahrenheit">Masukkan suhu dalam Fahrenheit:</label>
+          <input type="number" id="fahrenheit" name="fahrenheit" />
+          <button class="btn btn-primary" onclick="convertToFahrenheit()">
+            Konversi
+          </button>
+          <p class="fw-bold" id="result"></p>
+        </div>
+      </section>
+
       <!-- Modal -->
       <div class="modal" tabindex="-1" id="exampleModal">
         <div class="modal-dialog">
@@ -224,6 +238,39 @@
       const tooltipList = [...tooltipTriggerList].map(
         (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
       );
+
+      // Konversi Suhu Fahrenheit ke Celsius
+      function convertToFahrenheit() {
+        const fahrenheit = document.getElementById("fahrenheit").value;
+        const celsius = ((fahrenheit - 32) * 5) / 9;
+        document.getElementById("result").innerText = `Hasil: ${celsius.toFixed(
+          2
+        )} °C`;
+      }
+
+      // style with DOM
+      document.getElementById("title").style.fontFamily = "Playfair Display";
+      document.getElementById("thermometer").style.background = "#06D001";
+
+      // Fungsi untuk menampilkan waktu real-time
+      function updateClock() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, "0");
+        const minutes = String(now.getMinutes()).padStart(2, "0");
+        const seconds = String(now.getSeconds()).padStart(2, "0");
+        const day = String(now.getDate()).padStart(2, "0");
+        const month = String(now.getMonth() + 1).padStart(2, "0"); // January is 0!
+        const year = now.getFullYear();
+
+        const timeString = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+        document.getElementById("clock").textContent = timeString;
+      }
+
+      // Memperbarui jam setiap detik
+      setInterval(updateClock, 1000);
+
+      // Memanggil fungsi updateClock sekali untuk inisialisasi
+      updateClock();
     </script>
   </body>
 </html>
