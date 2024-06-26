@@ -96,6 +96,7 @@
                 <i class="fa-brands fa-instagram"></i>
               </button>
             </div>
+            <div class="clock fw-bold fs-1" id="clock"></div>
           </div>
           <div class="col-md-6">
             <img
@@ -250,6 +251,26 @@
       // style with DOM
       document.getElementById("title").style.fontFamily = "Playfair Display";
       document.getElementById("thermometer").style.background = "#06D001";
+
+      // Fungsi untuk menampilkan waktu real-time
+      function updateClock() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, "0");
+        const minutes = String(now.getMinutes()).padStart(2, "0");
+        const seconds = String(now.getSeconds()).padStart(2, "0");
+        const day = String(now.getDate()).padStart(2, "0");
+        const month = String(now.getMonth() + 1).padStart(2, "0"); // January is 0!
+        const year = now.getFullYear();
+
+        const timeString = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+        document.getElementById("clock").textContent = timeString;
+      }
+
+      // Memperbarui jam setiap detik
+      setInterval(updateClock, 1000);
+
+      // Memanggil fungsi updateClock sekali untuk inisialisasi
+      updateClock();
     </script>
   </body>
 </html>
