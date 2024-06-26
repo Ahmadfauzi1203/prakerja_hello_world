@@ -56,7 +56,7 @@
       </div>
     </header>
     <main>
-      <section class="jumbotron bg-info container-fluid">
+      <section class="jumbotron bg-info container-fluid py-3">
         <div class="row align-items-center">
           <div class="col-md-6 p-5">
             <h1 class="fw-bold" style="font-family: Playfair Display">
@@ -181,8 +181,8 @@
 
       <!-- Thermometer -->
       <section id="thermometer" class="mt-5">
-        <div class="container rounded-2 py-3 bg-info">
-          <h1>Konversi Suhu Fahrenheit ke Celsius</h1>
+        <div class="container rounded-2 py-3">
+          <h1 id="title">Konversi Suhu Fahrenheit ke Celsius</h1>
           <label for="fahrenheit">Masukkan suhu dalam Fahrenheit:</label>
           <input type="number" id="fahrenheit" name="fahrenheit" />
           <button class="btn btn-primary" onclick="convertToFahrenheit()">
@@ -246,6 +246,9 @@
           2
         )} °C`;
       }
+
+      document.getElementById("title").style.fontFamily = "Playfair Display";
+      document.getElementById("thermometer").style.background = "#06D001";
     </script>
   </body>
 </html>
