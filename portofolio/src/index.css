@@ -77,6 +77,11 @@ main {
   padding: 10px;
 }
 
+#todo {
+  width: 100%;
+  padding: 10px;
+}
+
 /* page contactme */
 
 #form-message {

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import React from "react";
 import Thermometer from "../components/Thermometer";
+import TodoList from "../components/TodoList";
 
 const HomePage = () => {
   const tooltipTriggerList = document.querySelectorAll(
@@ -177,6 +178,9 @@ const HomePage = () => {
 
         {/* Thermometer */}
         <Thermometer />
+
+        {/* Todo List */}
+        <TodoList />
 
         {/* Modal */}
         <div className="modal" tabindex="-1" id="exampleModal">
