@@ -7,6 +7,7 @@ const TodoList = () => {
   const [deadline, setDeadline] = useState("");
   const [isEditing, setIsEditing] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(null);
+  const [deletedCount, setDeletedCount] = useState(0);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -45,6 +46,7 @@ const TodoList = () => {
   const handleDelete = (index) => {
     const updatedTodos = todos.filter((_, i) => i !== index);
     setTodos(updatedTodos);
+    setDeletedCount(deletedCount + 1);
   };
 
   return (
@@ -148,6 +150,9 @@ const TodoList = () => {
               ))}
             </tbody>
           </table>
+          <div className="text-center">
+            <p>Total Tasks Deleted/Completed: {deletedCount}</p>
+          </div>
         </div>
       </section>
     </>
