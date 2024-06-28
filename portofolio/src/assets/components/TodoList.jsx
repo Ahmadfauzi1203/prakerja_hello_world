@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const TodoList = () => {
   const [todos, setTodos] = useState([]);
@@ -8,6 +8,14 @@ const TodoList = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(null);
   const [deletedCount, setDeletedCount] = useState(0);
+
+  useEffect(() => {
+    alert("Selamat Datang");
+
+    return () => {
+      alert("Sampai Jumpa");
+    };
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
